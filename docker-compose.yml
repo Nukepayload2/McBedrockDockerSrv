@@ -1,0 +1,11 @@
+version: "3.5"
+services:
+  bedrock:
+    image: minecraft-bedrock-server:latest
+    ports: 
+      - 19132:19132/udp
+    volumes:
+      - ./worlds:/bedrock-server/worlds
+      - ./server.properties:/bedrock-server/server.properties
+      - ./allowlist.json:/bedrock-server/allowlist.json
+      - ./permissions.json:/bedrock-server/permissions.json
